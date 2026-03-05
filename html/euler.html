@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Euler Day | First Proof Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header>
+<nav class="container">
+    <a href="about.html">About</a>
+    <a href="index.html">First Batch</a>
+    <a href="second-batch.html">Second Batch</a>
+</nav>
+</header>
+
+<main class="container">
+
+<section class="hero">
+    <div class="banner">First Proof</div>
+    <p class="tagline">On Euler Day — February 7, 2026</p>
+</section>
+
+<section id="euler">
+    <h2>On Euler Day — February 7, 2026</h2>
+    <div class="euler-section">
+        <p>In 1768, in his <em>Institutiones calculi integralis</em>, Euler proposed a method for approximating solutions to ordinary differential equations with given initial values. His idea would seem simple in hindsight: compute the slope of the solution curve at a point, step forward a small distance along the tangent line, recompute the slope at the new point, and repeat. The result is an approximation to the true solution curve by a succession of segments.</p>
+
+        <p>Formally, given an equation specifying the rate of change of some quantity w as a function of its current value and time, dw/dt = g(w, t), w(0) = w₀, Euler's method updates the estimate as w(t + Δt) ≈ w(t) + α · g(w(t), t). Euler needed his method because the ODEs he cared about, such as the equations of motion for rigid bodies, celestial mechanics problems, and various problems in fluid flow, lack closed-form solutions, and higher-order approximations were beyond the reach of hand computation.</p>
+
+        <p>In modern machine learning, training a neural network means minimizing a loss function F over the network's parameters w. The standard approach is gradient descent, which updates parameters by moving in a fixed amount in the direction of locally maximal decrease: wₙ₊₁ = wₙ − α · ∇F(wₙ). Gradient descent, whose particular importance was recognized by Cauchy several decades later, is in fact Euler's method applied to the particular gradient flow ODE dw/dt = −∇F(w(t)).</p>
+
+        <p>Gradient descent is used in training for neural networks today for an analogous reason to Euler's, transposed to a different scale. Better numerical methods for approximating ODEs exist; in particular, methods that incorporate curvature information via the Hessian, the d × d matrix of second partial derivatives of F. But for models with hundreds of billions to trillions of parameters, the Hessian has on the order of 10²²–10²⁴ entries. Computing, storing, or even approximating a Hessian at each training step is not feasible with current hardware. First-order methods, which encompass gradient descent and its modern variants like Adagrad and Adam, require only a gradient computation at each step, which scales gently linearly with the size of the parameter space.</p>
+
+        <p>On Euler day, we recognize that the simple discretization of the gradient flow ODE, proposed in a more general setting by Euler in the eighteenth century for enabling approximations by hand, today enables the training of neural networks at the frontier massive scale.</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Contact: <a href="mailto:contact@1stproof.org">contact@1stproof.org</a></p>
+        <p style="margin-top: 1rem;">© 2026 First Proof Project</p>
+    </div>
+</footer>
+
+</body>
+</html>

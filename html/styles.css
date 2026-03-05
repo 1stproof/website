@@ -1,0 +1,349 @@
+		:root {
+			--chalkboard: #2d3436;
+			--chalkboard-light: #3d4446;
+			--chalk: #f5f0e6;
+			--chalk-dim: #c4bfb3;
+			--wood: #8b5a2b;
+			--wood-light: #a67c52;
+			--gold: #d4a84b;
+			--gold-light: #e8c87a;
+			--accent-green: #6b9b6b;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+			background-color: var(--chalkboard);
+			color: var(--chalk);
+			line-height: 1.7;
+		}
+
+		h1, h2, h3 {
+			font-family: 'Libre Baskerville', Georgia, serif;
+			font-weight: 400;
+		}
+
+		.banner {
+			background-image: url("graphics/Blackboard.jpg");
+   			background-repeat: no-repeat;
+   			background-size: 100%;
+  text-align: center;
+   			     width: 100%;
+       			     height: width*0.15;
+			font-family: 'Libre Baskerville', Georgia, serif;
+			font-weight: 600;
+			font-size: calc(min(7.5vw,70px));
+			color: #fae1b4;
+			border-style: solid;
+			border-color: #644117;
+   		}
+
+		.faq-section {
+			background: linear-gradient(135deg, var(--chalkboard-light) 0%, var(--chalkboard) 100%);
+			border-radius: 8px;
+			padding: 2rem;
+			margin-top: 1rem;
+		}
+
+		.faq-section h3 {
+			color: var(--gold-light);
+			margin-bottom: 1rem;
+			font-size: 1.3rem;
+		}
+
+		.faq-section .question {
+			color: var(--gold);
+			margin-bottom: 0.1rem;
+			font-size: 1.3rem;
+			font-weight: 400;
+		}
+
+		.faq-section .answer {
+			margin-bottom: 1rem;
+			font-size: 1.1rem;
+		}
+
+
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+		}
+
+		/* Header */
+		header {
+			background: linear-gradient(180deg, var(--wood) 0%, var(--wood-light) 100%);
+			padding: 0.75rem 0;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+		}
+
+		nav {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
+
+		nav a {
+			color: var(--chalk);
+			text-decoration: none;
+			font-size: 0.95rem;
+			padding: 0.5rem 0;
+			border-bottom: 2px solid transparent;
+			transition: border-color 0.2s;
+		}
+
+		nav a:hover {
+			border-bottom-color: var(--gold);
+		}
+
+		/* Hero */
+		.hero {
+			text-align: center;
+			padding: 3rem 0 2rem;
+		}
+		
+		.hero-image {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+			margin-bottom: 0.5rem;
+		}
+
+		.image-credit {
+			font-size: 0.8rem;
+			color: var(--chalk-dim);
+			font-style: italic;
+			margin-bottom: 1.5rem;
+		}
+
+		.hero h1 {
+			font-size: clamp(1.75rem, 5vw, 2.5rem);
+			margin-bottom: 1rem;
+			color: var(--chalk);
+		}
+
+		.hero .tagline {
+			padding-top: 1.5rem;
+			font-size: 1.3rem;
+			color: var(--chalk-dim);
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		.benchmark-update {
+			padding-top: 1.5rem;
+			padding-bottom: 0rem;
+			margin-bottom: 0rem;
+		}
+
+
+		section ul {
+			margin: 1rem 0 1rem 1.5rem;
+			color: var(--chalk-dim);
+		}
+
+		section ul li {
+			margin-bottom: 0.6rem;
+			font-size: 1rem;
+		}
+
+		/* Sections */
+		section {
+			padding: 1.5rem 0;
+			border-top: 1px solid var(--chalkboard-light);
+		}
+
+		section h2 {
+			font-size: clamp(1.4rem, 4vw, 1.8rem);
+			margin-bottom: 1.5rem;
+			color: var(--gold);
+		}
+
+		section p {
+			margin-bottom: 1rem;
+			color: var(--chalk-dim);
+		}
+
+		section p:last-child {
+			margin-bottom: 0;
+		}
+
+		section a {
+			color: var(--gold-light);
+			text-decoration: none;
+		}
+
+		section a:hover {
+			text-decoration: underline;
+		}
+
+		/* Cards */
+		.card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 1rem;
+			margin-top: 1.5rem;
+		}
+
+		.card-grid-4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@media (max-width: 800px) {
+			.card-grid-4 {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		.card {
+			background: var(--chalkboard-light);
+			border-radius: 8px;
+			padding: 1.5rem;
+			border: 1px solid rgba(255,255,255,0.1);
+			transition: transform 0.2s, box-shadow 0.2s;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+		}
+
+		.card h3 {
+			color: var(--chalk);
+			margin-bottom: 0.75rem;
+			font-size: 1.2rem;
+		}
+
+		.card p {
+			font-size: 0.95rem;
+			font-family: 'Source Sans Pro', sans-serif;
+			flex-grow: 1;
+		}
+
+		.card .placeholder {
+			font-family: 'Source Sans Pro', sans-serif;
+			display: block;
+			margin-top: 1rem;
+			padding: 0.5rem 1rem;
+			background: var(--wood);
+			color: var(--chalk);
+			border-radius: 4px;
+			font-size: 0.85rem;
+			text-decoration: none;
+			transition: background 0.2s;
+			text-align: center;
+		}
+
+		.card .placeholder:hover {
+			background: var(--wood-light);
+		}
+
+		/* Euler Section */
+		.euler-section {
+			background: linear-gradient(135deg, var(--chalkboard-light) 0%, var(--chalkboard) 100%);
+			border-radius: 8px;
+			padding: 2rem;
+			margin-top: 1rem;
+			border-left: 4px solid var(--gold);
+		}
+
+		.euler-section h3 {
+			color: var(--gold-light);
+			margin-bottom: 1rem;
+			font-size: 1.3rem;
+		}
+
+		.math-block {
+			font-family: 'Libre Baskerville', Georgia, serif;
+			font-style: italic;
+			text-align: center;
+			padding: 1rem;
+			margin: 1rem 0;
+			color: var(--chalk);
+			font-size: 1.1rem;
+		}
+
+		/* Author List */
+		.authors {
+			columns: 2;
+			column-gap: 2rem;
+			margin-top: 1rem;
+		}
+
+		.authors p {
+			break-inside: avoid;
+			margin-bottom: 0.5rem;
+			font-size: 0.95rem;
+		}
+
+		.authors .name {
+			color: var(--chalk);
+			font-weight: 600;
+		}
+
+		.authors .affiliation {
+			color: var(--chalk-dim);
+			font-style: italic;
+		}
+
+		/* Footer */
+		footer {
+			background: var(--wood);
+			padding: 2rem 0;
+			margin-top: 3rem;
+			text-align: center;
+		}
+
+		footer p {
+			color: var(--chalk-dim);
+			font-size: 0.9rem;
+		}
+
+		footer a {
+			color: var(--gold-light);
+			text-decoration: none;
+		}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+		/* Responsive */
+		@media (max-width: 600px) {
+			nav {
+				gap: 1rem;
+			}
+
+			nav a {
+				font-size: 0.85rem;
+			}
+
+			.hero {
+				padding: 2rem 0 1.5rem;
+			}
+
+			section {
+				padding: 2rem 0;
+			}
+
+			.euler-section {
+				padding: 1.5rem;
+			}
+
+			.authors {
+				columns: 1;
+			}
+
+			.card {
+				padding: 1.25rem;
+			}
+		}
